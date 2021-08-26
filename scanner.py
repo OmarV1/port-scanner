@@ -21,7 +21,7 @@ try:
     
     for port in range(40,85): #scanning port range
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #establish connection to connect to ipv4
-            socket.setdefaulttimeout(1) #time to connect is only 2 sec and stop and see next port
+            socket.setdefaulttimeout(1) #time to connect is only 1 sec and stop and see next port
             result = s.connect_ex((target,port)) #connect to the port and target and if port close return an error indicator and close the connection
             if result == 0:
                     print("port {} is open".format(port))
